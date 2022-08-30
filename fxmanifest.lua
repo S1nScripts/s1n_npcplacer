@@ -14,7 +14,3 @@ shared_scripts {
 client_scripts {
     "client/main.lua"
 }
-
-escrow_ignore {
-    "**.*"
-}
