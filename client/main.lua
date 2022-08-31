@@ -14,7 +14,7 @@ local function createNpc(model, position)
         Citizen.Wait(100)
     end
 
-    local ped = CreatePed(4, model, position.x, position.y, position.z - 1, position.h, false, true)
+    local ped = CreatePed(4, model, position.x, position.y, position.z - 1, position.w, false, true)
 
     FreezeEntityPosition(ped, true)
     SetEntityInvincible(ped, true)
