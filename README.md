@@ -20,7 +20,7 @@ With this script, you can add customizable NPC characters to your game world. �
 - FiveM server
 
 ## 💬 Support
-If you need help with the script, feel free to join the S1nScripts community on Discord at [discord.gg/S1nScripts](https://discord.gg/S1nScripts). 
+If you need help with the script, feel free to join the S1nScripts community on Discord at [discord.gg/4gtdmjuN3Q](https://discord.gg/4gtdmjuN3Q). 
 If you have any suggestions or found a bug, please create an issue.
 
 ## 🎨 Customization
