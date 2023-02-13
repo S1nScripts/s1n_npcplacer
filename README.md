@@ -1,35 +1,36 @@
-# NPC Library
+# 🚀 S1n NPC Placer for FiveM
 
-## Introduction
+Bring your game to life with this NPC system ! 🤖
 
-This library allows you to create a NPC (Non-Player Character) and attach a prop to it, and play an animation. 
+With this script, you can add customizable NPC characters to your game world. 🧔
 
+## 🔧 Features
+- Load NPCs with custom models and positions
+- Attach props to NPCs
+- Play animations for NPCs
 
-## Usage
+## 📦 Installation & Setup
+1. Download the script from my [webstore](https://store.s1nscripts.com), otherwise you won't be able to use it.
+2. Extract the files to your FiveM server's resources folder
+3. Add the following line to your server.cfg: `start s1n_npcplacer`
+4. Configure the NPCs in the config.lua file
+5. Enjoy! 🎉
 
-TODO
+## 💻 Requirements
+- FiveM server
 
+## 💬 Support
+If you need help with the script, feel free to join the S1nScripts community on Discord at [discord.gg/S1nScripts](https://discord.gg/S1nScripts). 
+If you have any suggestions or found a bug, please create an issue.
 
-## NPC Class
+## 🎨 Customization
+The mod is fully customizable, so you can make it your own!
 
-The NPC class has the following functions:
+## 🙌 Special Thanks
+A big thanks to everyone who helped make this mod possible.
 
-### NPC:new(model, position)
+## 📜 License
+This mod is licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-This function creates a new instance of the NPC class. 
-
-- `model`: The model of the NPC.
-- `position`: The position of the NPC.
-
-### NPC:attachProp(propData)
-
-This function attaches a prop to the NPC. 
-
-- `propData`: A table that contains the prop data.
-
-### NPC:playAnimation(animationDict, animationName)
-
-This function plays an animation for the NPC.
-
-- `animationDict`: The animation dictionary.
-- `animationName`: The name of the animation.
+## 🚀 Let's Get Started!
+Start bringing your game world to life with this NPC mod! 😃
