@@ -24,13 +24,4 @@ If you need help with the script, feel free to join the S1nScripts community on 
 If you have any suggestions or found a bug, please create an issue.
 
 ## 🎨 Customization
-The mod is fully customizable, so you can make it your own!
-
-## 🙌 Special Thanks
-A big thanks to everyone who helped make this mod possible.
-
-## 📜 License
-This mod is licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-## 🚀 Let's Get Started!
-Start bringing your game world to life with this NPC mod! 😃
+The script is fully customizable, so you can make it your own!
