@@ -1,8 +1,12 @@
-local MAX_TIMECOUNT = 100
+local MAX_REFRESH_TIMECOUNT = 100
 
 local NPC = {}
 NPC.__index = NPC
 
+-- This method creates a new NPC object with the given model and position. It requests the model and waits until it is loaded. It then creates a ped at the given position and sets it as invincible and frozen.
+-- @param {model} : string, the model of the NPC
+-- @param {position} : table, the position of the NPC
+-- @returns : NPC object
 function NPC:new(model, position)
     local object = {}
     setmetatable(object, NPC)
@@ -15,7 +19,7 @@ function NPC:new(model, position)
 
     local timeoutCount = 0
 
-    while not HasModelLoaded(object.model) and timeoutCount < 100 do
+    while not HasModelLoaded(object.model) and timeoutCount < MAX_REFRESH_TIMECOUNT do
         timeoutCount = timeoutCount + 1
 
         Citizen.Wait(100)
@@ -29,6 +33,9 @@ function NPC:new(model, position)
     return object
 end
 
+-- This method attaches a prop to the NPC. It first requests the model of the prop and waits until it is loaded. It then creates the object and attaches it to the NPC's ped using the AttachEntityToEntity function.
+-- @param {propData} : table, data for the prop to be attached to the NPC
+-- @returns : nil
 function NPC:attachProp(propData)
     local propHash = GetHashKey(propData.model)
 
@@ -36,7 +43,7 @@ function NPC:attachProp(propData)
 
     local timeoutCount = 0
 
-    while not HasModelLoaded(propHash) and timeoutCount < MAX_TIMECOUNT do
+    while not HasModelLoaded(propHash) and timeoutCount < MAX_REFRESH_TIMECOUNT do
         timeoutCount = timeoutCount + 1
 
         Citizen.Wait(100)
@@ -46,6 +53,10 @@ function NPC:attachProp(propData)
     AttachEntityToEntity(object, self.ped, GetPedBoneIndex(self.ped, propData.bone and propData.bone or 60309), propData.position.x, propData.position.y, propData.position.z, propData.rotation.x, propData.rotation.y, propData.rotation.z, true, true, false, true, 0, true)
 end
 
+-- This method plays an animation for the NPC. It first requests the animation dictionary and waits until it is loaded. It then uses the TaskPlayAnim function to play the animation for the NPC's ped.
+-- @param {animationDict} : string, the animation dictionary for the animation
+-- @param {animationName} : string, the name of the animation
+-- @returns : nil
 function NPC:playAnimation(animationDict, animationName)
     RequestAnimDict(animationDict)
 
@@ -56,11 +67,10 @@ function NPC:playAnimation(animationDict, animationName)
     TaskPlayAnim(self.ped, animationDict, animationName, 1.0, 1.0, -1, 9, 1.0, 0, 0, 0)
 end
 
--- Load a NPC with possibility to play an animation and attach a prop to it
--- @param {table} model - Model of the NPC
--- @param {table} position - Position of the NPC
--- @param {table} animation - Animation data of the NPC
--- @param {table} prop - Prop data to attach to the NPC
+
+-- This function loads an NPC by creating a new NPC object and attaching props and playing animations if specified in the npcData. It runs the code in a separate thread using Citizen.CreateThread.
+-- @param {npcData} : table, data for the NPC to be loaded
+-- @returns : nil
 local function loadNpc(npcData)
     Citizen.CreateThread(function()
         local npc = NPC:new(npcData.model, npcData.position)
