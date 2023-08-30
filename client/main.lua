@@ -25,7 +25,7 @@ function NPC:new(model, position)
         Citizen.Wait(100)
     end
 
-    object.ped = CreatePed(4, object.model, position.x, position.y, position.z - 1, position.w, false, true)
+    object.ped = CreatePed(4, object.model, position.x, position.y, position.z - 1, position.w, false, false)
     FreezeEntityPosition(object.ped, true)
     SetEntityInvincible(object.ped, true)
     SetBlockingOfNonTemporaryEvents(object.ped, true)
