@@ -9,7 +9,7 @@ Config = {
             {
                 position = vector4(x, y, z, heading), -- NPC position X, Y, Z, Heading
                 model = "modelName", -- NPC model (here is a list of all models https://wiki.rage.mp/index.php?title=Peds)
-                animation = { -- Animation list : https://alexguirre.github.io/animations-list/ (dict in bold, animation name in regular)
+                animation = { -- Animation list : https://s1nyx.github.io/animations-list/ (dict in bold, animation name in regular)
                     enable = true, -- Activate the animation for the NPC
                     dict = "dictName", -- Dictionary associated to the animation
                     name = "animationName" -- Animation's name
@@ -29,7 +29,7 @@ Config = {
         {
             position = vector4(461.288, -1691.799, 29.28, 225.0), -- NPC position X, Y, Z, Heading
             model = "csb_trafficwarden", -- NPC model (here is a list of all models https://wiki.rage.mp/index.php?title=Peds)
-            animation = { -- Animation list : https://alexguirre.github.io/animations-list/ (dict in bold, animation name in regular)
+            animation = { -- Animation list : https://s1nyx.github.io/animations-list/ (dict in bold, animation name in regular)
                 enable = true, -- Activate the animation for the NPC
                 dict = "mp_player_intdrink", -- Dictionary associated to the animation
                 name = "loop_bottle" -- Animation's name
@@ -48,7 +48,7 @@ Config = {
         {
             position = vector4(459.71, -1691.42, 29.28, 319.87), -- NPC position X, Y, Z, Heading
             model = "ig_andreas", -- NPC model (here is a list of all models https://wiki.rage.mp/index.php?title=Peds)
-            animation = { -- Animation list : https://alexguirre.github.io/animations-list/ (dict in bold, animation name in regular)
+            animation = { -- Animation list : https://s1nyx.github.io/animations-list/ (dict in bold, animation name in regular)
                 enable = true, -- Activate the animation for the NPC
                 dict = "amb@world_human_drinking@coffee@male@base", -- Dictionary associated to the animation
                 name = "base" -- Animation's name
@@ -68,7 +68,7 @@ Config = {
         {
             position = vector4(458.3, -1690.5, 29.28, 343.25), -- NPC position X, Y, Z, Heading
             model = "s_m_y_airworker", -- NPC model (here is a list of all models https://wiki.rage.mp/index.php?title=Peds)
-            animation = { -- Animation list : https://alexguirre.github.io/animations-list/ (dict in bold, animation name in regular)
+            animation = { -- Animation list : https://s1nyx.github.io/animations-list/ (dict in bold, animation name in regular)
                 enable = true, -- Activate the animation for the NPC
                 dict = "missheistdockssetup1clipboard@base", -- Dictionary associated to the animation
                 name = "base" -- Animation's name
