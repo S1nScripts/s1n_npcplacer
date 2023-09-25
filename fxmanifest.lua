@@ -5,7 +5,7 @@ lua54 "yes"
 game "gta5"
 name "S1n NPC Placer"
 author "Sinyx"
-version '1.0.4'
+version '1.0.5'
 
 shared_scripts {
     "config.lua"
